@@ -28,7 +28,7 @@ architecture Behavioral of interleaver is
 			d       : in std_logic;
 			q       : out std_logic
 		);
-  end component;
+    end component;
 	
 
     -- D-flip-flop with enable 

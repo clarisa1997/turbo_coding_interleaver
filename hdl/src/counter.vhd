@@ -21,8 +21,8 @@ architecture struct of Counter is
 	-- Output of the fullAdder_N
 	signal fullAdder_out : std_logic_vector(N - 1 downto 0);
 	
-  -- Output of the DFF_N
-  signal q_h : std_logic_vector(N - 1 downto 0);
+  	-- Output of the DFF_N
+  	signal q_h : std_logic_vector(N - 1 downto 0);
 	
 	--------------------------------------------------------------
 	-- Components declaration
@@ -38,7 +38,7 @@ architecture struct of Counter is
 			d       : in std_logic_vector(N - 1 downto 0);
 			q       : out std_logic_vector(N - 1 downto 0)
 		);
-  end component;
+  	end component;
 	
 	component ripple_carry_adder is
     generic (Nbit : integer := 8);
