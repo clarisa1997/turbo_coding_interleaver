@@ -24,7 +24,7 @@ architecture Behavioral of interleaver is
     component DFF is
 		port( 
 			clk     : in std_logic;
-			rst : in std_logic;
+			rst     : in std_logic;
 			d       : in std_logic;
 			q       : out std_logic
 		);
@@ -34,11 +34,11 @@ architecture Behavioral of interleaver is
     -- D-flip-flop with enable 
     component DFF_en is
     port(
-        resetn : in std_logic ;
-        clock : in std_logic ;
-        en : in std_logic;
-        di : in std_logic;
-        do : out std_logic
+        resetn  : in std_logic ;
+        clock   : in std_logic ;
+        en      : in std_logic;
+        di      : in std_logic;
+        do      : out std_logic
     );
     end component DFF_en;
 
@@ -47,7 +47,7 @@ architecture Behavioral of interleaver is
     generic( N : NATURAL := 8);
     port(
         clk       : in  std_logic;
-        rst   : in  std_logic;
+        rst       : in  std_logic;
         increment : in  std_logic_vector(N - 1 downto 0);
 	    en        : in  std_logic;
         cntr_out  : out std_logic_vector(N - 1 downto 0)

@@ -1,21 +1,21 @@
 -- Librerie utilizzate
 library IEEE;
 use IEEE.std_logic_1164.all;
-entity tb_8bits is
-end tb_8bits;
+entity tb_8bits_2 is
+end tb_8bits_2;
 -- Dichiarazione dell'entità
-architecture interleaver_test of tb_8bits is
+architecture interleaver_test of tb_8bits_2 is
 	component interleaver
    generic(Nbit: POSITIVE := 8);
 		port (
-			clock		: in std_logic;						-- segnale di clock
-			reset	: in std_logic;							-- segnale di reset
-			bit_in		: in std_logic;	-- ingresso
-			bit_out 	: out std_logic	-- uscita
+			clock		: in std_logic;				
+			reset	    : in std_logic;			    
+			bit_in		: in std_logic;	            
+			bit_out 	: out std_logic	            
 			);
 	end component;
 -----------------------------------------------------
---CONSTANT
+   --CONSTANT
 	CONSTANT clock_period : TIME := 100 ns;
 	CONSTANT len : INTEGER := 19;
 	--INPUT SIGNALS
@@ -31,7 +31,7 @@ architecture interleaver_test of tb_8bits is
 
 	SIGNAL count: INTEGER:= 0;
 
-  SIGNAL count_reset: INTEGER:= 0;
+   SIGNAL count_reset: INTEGER:= 0;
 
 	BEGIN
 		I: interleaver
@@ -39,7 +39,7 @@ architecture interleaver_test of tb_8bits is
        PORT MAP
            (clock => clock_tb, reset => reset_tb, bit_in => bit_in_tb, bit_out =>bit_out_tb);
 
---Generates clk
+   --Generates clk
 	clock_tb <=NOT clock_tb AFTER clock_period/2 WHEN testing ELSE '0';
    --reset_tb <= '0' after 2*clock_Period;
 
@@ -72,11 +72,9 @@ architecture interleaver_test of tb_8bits is
            if count >= 8 then
                bit_in_tb <= 'Z';
            end if;
-           if count = len then 
-               testing <= false;      -- fine test
-           end if;
            if (count > len) then 
                reset_tb <= '1';
+               testing <= false;      -- fine test
            end if;
            count <= count + 1;
        end if;

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/clari/Documents/GitHub/turbo_coding_interleaver/project_turbo_coding_interleaver_final/project_turbo_coding_interleaver_final.runs/synth_1'
+HD_PWD='C:/Users/clari/Documents/GitHub/turbo_coding_interleaver/vivado_project_turbo_coding_interleaver/vivado_project_turbo_coding_interleaver.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

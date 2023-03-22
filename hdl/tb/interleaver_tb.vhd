@@ -12,10 +12,10 @@ architecture interleaver_test of interleaver_tb is
 	component interleaver
 	generic (Nbit : POSITIVE := 1024);
 		port (
-			clock		: in std_logic;							-- segnale di clock
-			reset	: in std_logic;							-- segnale di reset
-			bit_in		: in std_logic;	-- ingresso
-			bit_out 	: out std_logic	-- uscita
+			clock		: in std_logic;							
+			reset		: in std_logic;							
+			bit_in		: in std_logic;	
+			bit_out 	: out std_logic	
 			);
 	end component;	
 
