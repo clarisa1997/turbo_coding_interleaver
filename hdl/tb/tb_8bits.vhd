@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 entity tb_8bits_2 is
 end tb_8bits_2;
--- Dichiarazione dell'entità
+-- Dichiarazione dell'entitï¿½
 architecture interleaver_test of tb_8bits_2 is
 	component interleaver
    generic(Nbit: POSITIVE := 8);
@@ -17,7 +17,7 @@ architecture interleaver_test of tb_8bits_2 is
 -----------------------------------------------------
    --CONSTANT
 	CONSTANT clock_period : TIME := 100 ns;
-	CONSTANT len : INTEGER := 19;
+	CONSTANT len : INTEGER := 18;
 	--INPUT SIGNALS
 	SIGNAL clock_tb : std_logic := '0';
 	SIGNAL reset_tb : std_logic := '1';
