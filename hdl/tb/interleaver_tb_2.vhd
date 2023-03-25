@@ -36,9 +36,7 @@ architecture interleaver_test_2 of interleaver_tb_2 is
 
 	
 	SIGNAL testing: Boolean :=True;
-
 	SIGNAL count: INTEGER:= 0;
-
 	SIGNAL count_reset: INTEGER:= 0;
 
 	BEGIN

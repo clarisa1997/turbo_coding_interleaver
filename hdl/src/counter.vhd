@@ -33,7 +33,7 @@ architecture struct of Counter is
 		
 		port( 
 			clk     : in std_logic;
-			rst : in std_logic;
+			rst 	: in std_logic;
 			en      : in std_logic;
 			d       : in std_logic_vector(N - 1 downto 0);
 			q       : out std_logic_vector(N - 1 downto 0)
